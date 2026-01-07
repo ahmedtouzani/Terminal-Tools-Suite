@@ -64,16 +64,16 @@ def main():
     
     # Push to GitHub
     print("6. Pushing to GitHub...")
-    success, stdout, stderr = run_git_command("push -u origin main", ".")
+    success, stdout, stderr = run_git_command("push -u origin master", ".")
     if success:
         print("   [SUCCESS] Code pushed to GitHub!")
-        print("\n🎉 Repository is now live at:")
+        print("\nRepository is now live at:")
         print("   https://github.com/ahmedtouzani/Terminal-Tools-Suite")
     else:
         print(f"   [ERROR] {stderr}")
-        print("\n⚠️  You may need to:")
+        print("\nYou may need to:")
         print("   1. Create a personal access token on GitHub")
-        print("   2. Use: git push -u origin main")
+        print("   2. Use: git push -u origin master")
         print("   3. Or push manually from Git GUI")
     
     return True
